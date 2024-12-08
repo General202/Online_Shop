@@ -5,4 +5,13 @@ body {
   flex-direction: column;
 }
 
+.items-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  /*background-color: rgb(78, 172, 94);*/
+}
+
+
 
