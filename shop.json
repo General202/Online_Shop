@@ -2,70 +2,70 @@
     {
         "id": 1,
         "title": "Дуб звичайний",
-        "image": "rb_22762.png",
+        "image": "dyb2.jpg",
         "price": 300,
         "description": "Саженець дуба звичайного"
     },
     {
         "id": 2,
         "title": "Ялина звичайна",
-        "image": "rb_22762.png",
+        "image": "yalina.jpg",
         "price": 250,
         "description": "Саженець ялини звичайної"
     },
     {
         "id": 3,
         "title": "Сосна кримська",
-        "image": "rb_22762.png",
+        "image": "sosna.jpg",
         "price": 280,
         "description": "Саженець сосни кримської"
     },
     {
         "id": 4,
         "title": "Береза повисла",
-        "image": "rb_22762.png",
+        "image": "bereza.jpg",
         "price": 220,
         "description": "Саженець берези повислої"
     },
     {
         "id": 5,
         "title": "Клен гостролистий",
-        "image": "rb_22762.png",
+        "image": "klen.jpg",
         "price": 270,
         "description": "Саженець клена гостролистого"
     },
     {
         "id": 6,
         "title": "Граб звичайний",
-        "image": "rb_22762.png",
+        "image": "grab.jpg",
         "price": 260,
         "description": "Саженець граба звичайного"
     },
     {
         "id": 7,
         "title": "Липа дрібнолиста",
-        "image": "rb_22762.png",
+        "image": "lupa.jpg",
         "price": 240,
         "description": "Саженець липи дрібнолистої"
     },
     {
         "id": 8,
         "title": "Каштан кінський",
-        "image": "rb_22762.png",
+        "image": "kashtan.jpg",
         "price": 290,
         "description": "Саженець каштана кінського"
     },
     {
         "id": 9,
         "title": "Верба плакуча",
-        "image": "rb_22762.png",
+        "image": "plakyca_bereza.jpg",
         "price": 310,
         "description": "Саженець верби плакучої"
     },
     {
         "id": 10,
         "title": "Ясен звичайний",
-        "image": "rb_22762.png",
+        "image": "yasen.jpg",
         "price": 320,
         "description": "Саженець ясена звичайного"
     }
