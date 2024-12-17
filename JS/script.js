@@ -106,7 +106,7 @@ function getCartItem(item){
         <div class="col">
           <img src="img/${item.image}" class="img-fluid">
         </div>
-        <div class="col mx-3">${item.title}</div>
+        <div class="col">${item.title}</div>
         <div class="col">${item.quantity} шт.</div>
         <div class="col">${item.price}грн.</div>
       </div>
@@ -114,14 +114,27 @@ function getCartItem(item){
 }
 
 function showCart(){
-  cart_list.innerHTML =""
-  for (let key in cart.items){
-    cart_list.innerHTML+= getCartItem(cart.items[key])
+  if (cart_list){
+    cart_list.innerHTML =""
+
+    for (let key in cart.items){
+      cart_list.innerHTML+= getCartItem(cart.items[key])
+    }
+
+    if (Object.keys(cart.items).length>0){
+      cart_buttons.classList.remove('d-none')
+    }
   }
-  
 }
 
 let cart_list =document.querySelector(".modal-body")
 
 showCart()
+
+let cart_clean_btn = document.querySelector(".cart-clean")
+
+cart_clean_btn?.addEventListener("click", function(event){
+  document.cookie = `cart=''; max-age=0; path=/`;
+  cart_list.innerHTML = 'У кошику немає товарів!'
+})
 
