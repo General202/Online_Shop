@@ -1,0 +1,8 @@
+/* Загальні стилі */
+body {
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+
