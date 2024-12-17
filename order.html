@@ -9,13 +9,42 @@
 </head>
 <body data-bs-theme="light">
     
+  <head>
+    <nav data-bs-theme="dark" class="navbar navbar-expand-lg" style="background-color: rgb(66, 122, 88);">
+        <div class="container">
+            <img src="img/rb_22762.png" width="40" alt="" class="mx-3">
+            <a class="navbar-brand" href="#">Greenland</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Каталог
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Ялинки</a></li>
+                  <li><a class="dropdown-item" href="#">Великі дерева</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Малі дерева</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="background-color: rgb(65, 65, 65); color: rgb(185, 185, 185);">Пошук</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</head>
 
     <main class="container">
-       <div class="items-list container">
-
-       </div>
-    </main>
-        <h1>Ваш кошик:</h1>
+      <h1>Ваш кошик:</h1>
         <div class="row">
             <div class="col-12 col-md-6">
                 <form action="" method="post">
@@ -53,11 +82,32 @@
                 <div class="modal-body">
                     Тут будуть товари які ми добавили в кошик
                 </div>
-                <div class="items-list container">
-
-                </div>
             </div>
-        </div>     
+        </div>  
+    </main>
+
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Ваш кошик:</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Тут будуть товари які ми добавили в кошик
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+            <button type="button" class="btn btn-secondary cart-clean">Очистити кошик</button>
+            <a class="btn btn-primary" href="order.html">Оформити замовлення</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="JS/script.js"></script>
