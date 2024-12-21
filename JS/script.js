@@ -61,15 +61,17 @@ class ShoppingCart{
       }
   }
 
-  addItem(item){
-    if (this.items[item.id]){
-      this.items[item.id].quantity += 1
-    }else{
-      this.items[item.id] = item
-      this.items[item.id].quantity = 1
+  addItem(item) {
+    if (this.items[item.id]) {
+        this.items[item.id].quantity += 1;
+        this.items[item.id].totalPrice = this.items[item.id].quantity * this.items[item.id].price; // Перевірка та обчислення загальної ціни
+    } else {
+        this.items[item.id] = item;
+        this.items[item.id].quantity = 1;
+        this.items[item.id].totalPrice = item.price; // Ініціалізація загальної ціни
     }
-    this.saveCartToCookies()
-  }
+    this.saveCartToCookies();
+}
 
 }
 
@@ -99,31 +101,31 @@ getProducts().then(function(items){
 })
 
 //Додавання товарів кошика на сторінку
-function getCartItem(item){
-    return` 
-    <div class="card">
-      <div class="row">
-        <div class="col">
-          <img src="img/${item.image}" class="img-fluid">
-        </div>
-        <div class="col">${item.title}</div>
-        <div class="col">${item.quantity} шт.</div>
-        <div class="col">${item.price}грн.</div>
+function getCartItem(item) {
+  return `
+  <div class="card">
+    <div class="row">
+      <div class="col">
+        <img src="img/${item.image}" class="img-fluid">
       </div>
-    </div>`
+      <div class="col">${item.title}</div>
+      <div class="col">${item.quantity} шт.</div>
+      <div class="col">${item.totalPrice} грн.</div> <!-- Загальна ціна -->
+    </div>
+  </div>`;
 }
 
-function showCart(){
-  if (cart_list){
-    cart_list.innerHTML =""
 
-    for (let key in cart.items){
-      cart_list.innerHTML+= getCartItem(cart.items[key])
-    }
+function showCart() {
+  if (cart_list) {
+      cart_list.innerHTML = "";
 
-    if (Object.keys(cart.items).length>0){
-      cart_buttons.classList.remove('d-none')
-    }
+      let totalSum = 0; // Ініціалізація змінної для загальної суми
+
+      for (let key in cart.items) {
+          cart_list.innerHTML += getCartItem(cart.items[key]);
+          totalSum += cart.items[key].totalPrice; // Додавання ціни товару до загальної суми
+      }
   }
 }
 
@@ -134,6 +136,7 @@ showCart()
 let cart_clean_btn = document.querySelector(".cart-clean")
 
 cart_clean_btn?.addEventListener("click", function(event){
+  cart.items={}
   document.cookie = `cart=''; max-age=0; path=/`;
   cart_list.innerHTML = 'У кошику немає товарів!'
 })

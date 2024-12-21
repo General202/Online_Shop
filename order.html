@@ -22,29 +22,13 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Головна</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Каталог
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Ялинки</a></li>
-                  <li><a class="dropdown-item" href="#">Великі дерева</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Малі дерева</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" style="background-color: rgb(65, 65, 65); color: rgb(185, 185, 185);">Пошук</button>
-            </form>
           </div>
         </div>
       </nav>
 </head>
 
     <main class="container">
-      <h1>Ваш кошик:</h1>
+      <h1 style="color: rgb(1, 75, 23); text-align: center; margin-bottom: 20px;">Ваша корзина:</h1>
         <div class="row">
             <div class="col-12 col-md-6">
                 <form action="" method="post">
@@ -74,7 +58,7 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Коментар до замовлення</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                       </div> 
-                    <button type="button" class="btn btn-primary">Підтвердити замовлення</button>
+                    <button type="button" class="btn btn-primary confirm">Підтвердити замовлення</button>
                 </form>
             </div>
 
@@ -86,7 +70,6 @@
         </div>  
     </main>
 
-    
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -96,7 +79,6 @@
           </div>
           <div class="modal-body">
             Тут будуть товари які ми добавили в кошик
-            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
@@ -106,8 +88,6 @@
         </div>
       </div>
     </div>
-
-        
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="JS/script.js"></script>
